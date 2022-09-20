@@ -7,6 +7,7 @@ WORKDIR /home/rstudio/sources
 RUN git clone https://github.com/ArtifactDB/alabaster.schemas 
 RUN git clone https://github.com/ArtifactDB/alabaster.base 
 RUN git clone https://github.com/ArtifactDB/alabaster.matrix 
+RUN git clone https://github.com/ArtifactDB/alabaster.ranges
 
 # Pulling down other bits and pieces.
 RUN git clone https://github.com/LTLA/chihaya-R
@@ -19,6 +20,7 @@ RUN R -f install.R
 RUN R CMD INSTALL alabaster.schemas
 RUN R CMD INSTALL alabaster.base
 RUN R CMD INSTALL alabaster.matrix
+RUN R CMD INSTALL alabaster.ranges
 RUN R CMD INSTALL chihaya-R
 
 # Setting the working directory to the home.
